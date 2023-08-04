@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Example</title>
+</head>
+<body>
+    <button onclick="showMessage1()">Работает?</button>
+    <button onclick="showMessage2()">Хм…</button>
+
+    <script>
+        function showMessage1() {
+            alert("Работает. Не трогай!");
+        }
+
+        function showMessage2() {
+            var quotes = [
+                "Цитата 1",
+                "Цитата 2",
+                "Цитата 3"
+            ];
+
+            for (var i = 0; i < quotes.length; i++) {
+                setTimeout(function(quote) {
+                    alert(quote);
+                }, i * 1000, quotes[i]);
+            }
+        }
+    </script>
+</body>
+</html>
